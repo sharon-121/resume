@@ -1,0 +1,620 @@
+body {
+    background-color: #F3F3F3;
+    padding: 0PX;
+    margin: 0px;
+}
+
+* {   
+    box-sizing: border-box;
+    /*max-width: 1024px;*/
+    margin: 0px auto;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.darkbg {
+    margin: 20px 0px;
+    background-color: #282222;
+}
+
+/* --Navigation-- */
+nav {
+    font-family: Arial;
+    text-align: center;
+    margin-bottom: 20px;
+
+    background-color: rgba(243, 243, 243, 1);
+    z-index: 1000;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 確保導覽列在其他元素之上 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 添加陰影 */ 
+}
+
+nav a {
+    padding: 12px 10px;
+    margin: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #6f8bc5;
+    transform: scale(1.04);  /*選擇時跳動特效*/
+    border-bottom: 3px solid #6f8bc5;
+}
+
+.vertical-line {  /*垂直線*/
+    display: inline-block;
+    border-left: 1px solid #000000;
+    margin: 0 10px;
+    height: 20px;
+}
+
+footer {
+    background-color: #F3F3F3;
+    font-family: Arial;
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    margin-top: 0px;
+
+    h5 {
+        padding: 10px;
+    }
+}
+
+footer hr {  /*水平線*/
+    size:1px solid #ffffff;
+    text-align: center;
+    width:70%   
+}
+
+/* card */
+.white {
+    color: white;
+}
+
+.black {
+    color: rgb(255, 255, 255);
+}
+
+.black {
+    color: #000000;
+}
+
+.card {
+    scroll-margin-top: 100px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    max-width: 1024px;
+    height: 610px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* About */
+.aboutpic {
+    margin: 10px 0px 10px 0px;
+    width: 500px;
+    text-align: center;
+}
+
+.aboutpic:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.02);  /*選擇時跳動特效*/
+}
+
+.aboutpic:not(:hover) {
+    transition: 0.3s ease-in-out; /* 滑鼠移開時的過渡效果 */
+}
+
+.abouttxt {
+
+    margin: 10px 10px;
+    width: 400px;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+
+    ul {
+        padding-right: 50px;
+        font-size: 20px;
+    }
+}
+
+.abouttxt h1 {   
+    padding-right: 60px;
+    font-style: italic;
+    font-size: 60px;
+}
+
+.abouttxt h4 {
+    font-size: 20px;
+}
+
+.abouttxt h4:hover {
+    color: #040404;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.02);
+}
+
+.abouttxt h4:not(:hover) {
+    transition: 0.3s ease-in-out;
+}
+
+.contact-icon {
+    padding-right: 110px;
+
+    img {
+        margin: 10px 10px 0px 30px;
+    }
+
+    img:hover {
+        transition: 0.3s ease-in-out;
+        transform: scale(1.08);
+
+    }
+
+    img:not(:hover) {
+        transition: 0.3s ease-in-out;
+    }
+}
+
+/* --Skills-- */
+.card01 {
+    scroll-margin-top: 80px;
+    padding: 30px;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin: 5px 0px 20px 0px;
+    width: 1024px;
+    font-family: Arial;
+    font-style: italic;
+    font-size: 50px;
+    text-align: center;
+}
+
+.professional {
+    margin: 10px;
+    padding: 50px;
+    width: 650px;
+    background-color: #373A40;
+    border-radius: 30px; 
+}
+
+.professional:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.01);
+}
+
+.professional:not(:hover) {
+    transition: 0.3s ease-in-out;
+}
+  
+
+/* skill bar line */
+.professional-bar {
+    color: #F3F3F3;
+    font-size: 20px;
+    font-family: Arial;
+    margin-bottom: 40px;
+
+    ul {
+        width: 460px;
+        list-style-type: none;
+    }
+
+    li {
+        margin: 10px 10px;
+        width: 0px;
+        border-right-style: solid;
+        border-right-color: #6f8bc5;
+        border-radius: 20px;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.pro-front {
+    animation: bar1 2s ease-out;
+    border-right-width: 200px;
+}
+
+.pro-back {
+    animation: bar2 2s ease-out;
+    border-right-width: 210px;
+}
+
+.pro-database {
+    animation: bar3 2s ease-out;
+    border-right-width: 200px;
+}
+
+.pro-ppt {
+    animation: bar4 2s ease-out;
+    border-right-width: 280px;
+}
+
+.pro-guitar {
+    animation: bar5 2s ease-out;
+    border-right-width: 132px;
+}
+
+@keyframes bar {
+    from {
+        border-right-width: 0px;
+    }
+    to {
+        border-right-width: 0px;
+    }
+}
+
+@keyframes bar1 {
+    from {
+        border-right-width: 0px;
+    }
+    to {
+        border-right-width: 200px;
+    }
+}
+
+@keyframes bar2 {
+    from {
+        border-right-width: 0px;
+    }
+    to {
+        border-right-width: 210px;
+    }
+}
+
+@keyframes bar3 {
+    from {
+        border-right-width: 0px;
+    }
+    to {
+        border-right-width: 200px;
+    }
+}
+
+@keyframes bar4 {
+    from {
+        border-right-width: 0px;
+    }
+    to {
+        border-right-width: 280px;
+    }
+}
+
+@keyframes bar5 {
+    from {
+        border-right-width: 0px;
+    }
+    to {
+        border-right-width: 132px;
+    }
+}
+
+.pro-txt {
+    font-size: 20px;
+    transform: translate(7px,-32px); 
+}
+
+.bar {
+    width: 350px; 
+    height: 30px; 
+    border-radius: 20px;
+    background-color: #F3F3F3; 
+    transform: translate(-28px,36.5px);
+    position: relative;
+    z-index: 1;
+}
+
+.professional-bar li:hover {
+    animation: bar 0.1s ease-out;
+    border-right-width: 0px;
+}
+
+/* --Experience-- */
+/* education */
+.card02 {
+    scroll-margin-top: 88px;
+    padding: 30px;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.title02 {
+    color: white;
+    font-family: Arial;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.title03 {
+    color: black;
+    font-family: Arial;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.education-title {
+    margin: 0px 10px 0px 0px;
+    width: 220px;
+    background-color: #F3F3F3;
+    border-radius: 10px; 
+}
+
+.education-txt {
+    margin: 15px 10px;
+    width: 490px;
+    background-color: #FFFFFF;
+    border-radius: 20px; 
+
+    ul {
+        padding: 10px ;
+    }
+
+    li {
+        margin: 10px 5px 10px 5px;
+    }
+}
+
+.education-txt:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.02);
+}
+
+.education-txt:not(:hover) {
+    transition: 0.3s ease-in-out;
+}
+
+/* Work */
+.work-title {
+    margin: 0px 10px 0px 0px;
+    width: 220px;
+    background-color: #F3F3F3;
+    border-radius: 10px; 
+}
+
+.work-txt {
+    margin: 15px 10px;
+    width: 490px;
+    background-color: #FFFFFF;
+    border-radius: 20px; 
+
+    ul {
+        padding: 10px ;
+    }
+
+    li {
+        margin: 10px 5px 10px 5px;
+    }
+}
+
+.work-txt:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.02); 
+}
+
+.work-txt:not(:hover) {
+    transition: 0.3s ease-in-out; 
+}
+
+.txt01 {
+    font-size: 22px;
+    font-family: Arial;  
+}
+
+.txt02 {
+    font-size: 18px;
+}
+
+.ulmargin {
+    margin: 0px 0px 0px 30px;
+}
+
+.hov:hover {
+    color: #6f8bc5;
+    font-weight: bold;
+    transform: scale(1.001);
+}
+
+.pre-txt {
+    font-family: Arial;
+}
+
+/* Project */
+.project-title {
+    width: 100%;
+}
+.title04 {
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.project {
+    margin: 10px 0px 10px 0px;
+    padding: 30px;
+    max-width: 690px;
+    background-color: #373A40;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+}
+
+.project-name {
+    margin: 3px 10px 0px 10px;
+    width: 520px;
+    color: #FFFFFF;
+    background-color: #373A40;
+}
+
+.project-link {
+    margin: 10px 0px;
+    width: 60px;
+    height: 35px;
+    color: #FFFFFF;
+    background-color: #373A40;
+}
+
+.project-link:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.08); 
+}
+
+.project-link:not(:hover) {
+    transition: 0.3s ease-in-out; 
+}
+
+.project-txt {
+    padding: 10px;
+    padding-left: 10px;
+    margin: 0px 10px 10px 0px;
+    width: 600px;
+    color: #FFFFFF;
+    background-color: #373A40;
+    border-top: 1px solid #FFFFFF; /* 上邊框白色線 */
+}
+
+.title05 {
+    font-size: 25px;
+    
+}
+
+.txt03 {
+    font-size: 20px;
+}
+
+.txt04 {
+    font-size: 15px;
+}
+
+.button a {  
+    display: inline-block;
+    padding: 10px 15px;
+    font-weight: bold;
+    background-color: #6f8bc5;
+    font-family: Arial;
+    color: #fff;
+    text-decoration: none; /* 移除預設連結下劃線 */
+    border-radius: 20px;
+    transition: background-color 0.3s; /* 平滑過渡效果 */
+}
+
+.button a:hover {
+    background-color: #6f8bc5;
+}
+
+/* 圖片框 */
+.container {
+    width: 600px;
+    margin: 0 auto; /* 水平居中 */
+    background-color: #FFFFFF; /* 設置大的框背景顏色為黑色 */
+    padding: 20px; /* 内邊距 */
+    border-radius: 30px;
+}
+
+.container:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.02);
+}
+
+.container:not(:hover) {
+    transition: 0.5s ease-in-out;
+}
+  
+.image-slider {
+    position: relative;
+    width: 100%; /* 設置圖片框的寬度為容器的寬度 */
+    height: 350px; /* 設置圖片框的高度 */
+    border-radius: 10px;
+    overflow: hidden; /* 隐藏溢出部分 */
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+    object-fit: contain; /* 保持圖片比例 */
+}
+
+.slide:first-child {
+    display: block;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* 去除底色 */
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    padding: 15px; /* 内邊距 */
+    width: 40px; 
+    height: 60px; 
+    font-size: 30px;
+}
+
+.prev {
+left: 0;
+}
+
+.next {
+right: 0;
+}
+  
+.prev:hover,
+.next:hover {
+    transition: 0.3s ease-in-out;
+    color: #373A40;
+}
+
+/* Interest */
+.title06 {
+    color: #000000;
+    font-family: Arial;
+    font-size: 25px;
+    padding: 20px;
+    margin: auto 140px;
+}
+
+.interest-name {
+    margin: 3px 10px 0px 10px;
+    width: 520px;
+    color: #FFFFFF;
+    background-color: #373A40;
+}
